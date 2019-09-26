@@ -1,0 +1,75 @@
+/*selector-start*/
+.selector, .selector *{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: Helvetica, Tahoma, Verdana, sans-serif;
+}
+.selector {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+}
+.selector .current {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #5c92ff;
+  background-color: #5c92ff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.selector .current span {
+  display: inline-block;
+  width: 215px;
+  height: 33px;
+  padding-left: 10px;
+  color: #999;
+  overflow: hidden;
+  background-color: white;
+  vertical-align: top;
+}
+.selector .current i {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.selector .current i.collapse {
+  background-image: url(../img/arrow2.png);
+}
+.selector .current i.expand {
+  background-image: url(../img/arrow1.png);
+}
+.selector ul {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  color: #666;
+  padding: 0;
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(4, 0, 0, 0.08);
+  -moz-box-shadow: 0 3px 7px 0 rgba(4, 0, 0, 0.08);
+  -webkit-box-shadow: 0 3px 7px 0 rgba(4, 0, 0, 0.08);
+  list-style: none;
+}
+.selector ul.collapse {
+  display: none;
+}
+.selector ul.expand {
+  display: block;
+}
+.selector ul li {
+  padding: 0 10px;
+  overflow: hidden;
+}
+.selector ul li:hover {
+  background-color: #F7F7F7;
+}
+/*selector-end*/

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Demo</title>
+        <link rel="stylesheet" href="css/selector.css">
+	</head>
+	<body>
+		<div id="demo"></div>
+        <script src="js/selector.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            /**
+             * @param1: id of the node you want to mount
+             * @param2: value and text
+             * @param3: callback function
+             */
+            var demo = new Selector('demo', {
+                list: [{
+                    value: 1,
+                    text: 'Choice 1'
+                },{
+                    value: 2,
+                    text: 'Choice 2'
+                },{
+                    value: 3,
+                    text: 'Choice 3'
+                },{
+                    value: 4,
+                    text: 'Choice 4'
+                }],
+                placeholder: 'Please choose'
+            },function(value){console.log(value)});
+        </script>
+	</body>
+</html>
